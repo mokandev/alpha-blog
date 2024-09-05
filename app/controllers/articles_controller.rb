@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
       # also works - shortcut
     redirect_to @article
     else
-      redirect_to "/articles/new"
+      render 'new'
     end
   end
 
@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
 
-      redirect_to "/articles/#{params[:id]}/edit"
+      render "edit"
     end
   end
 end
